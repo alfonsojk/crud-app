@@ -16,10 +16,10 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "url" : `http://localhost:27017/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data,
-        "redirect":`http://localhost:3000`
+        "redirect":`http://localhost:27017`
     }
 
     $.ajax(request).done(function(response){
@@ -34,7 +34,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:3000/api/users/${id}`,
+            "url" : `http://localhost:27017/api/users/${id}`,
             "method" : "DELETE"
         }
 
