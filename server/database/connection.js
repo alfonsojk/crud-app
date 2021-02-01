@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectDB = async()=>{
+/* const connectDB = async()=>{
     try{
         //mongodb connection string
         const con = await mongoose.connect("mongodb://localhost:27017/api/users",{
@@ -15,6 +15,12 @@ const connectDB = async()=>{
         process.exit(1);
 
     }
-}
+} */
+
+
+mongoose.connect('mongodb://localhost:27017/api/users', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 
 module.exports = connectDB
